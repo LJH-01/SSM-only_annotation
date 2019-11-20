@@ -22,14 +22,21 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>5.2.0.RELEASE</spring.version>
         <mybatis-spring>2.0.3</mybatis-spring>
+        <fastjson>1.2.49</fastjson>
+        <lombok>1.18.10</lombok>
+        <jackson>2.10.0</jackson>
         <mybatis>3.5.3</mybatis>
+        <servlet-api>4.0.1</servlet-api>
+        <servlet.jsp-api>2.3.1</servlet.jsp-api>
+        <mysql-connector-java>5.1.40</mysql-connector-java>
+        <slf4j>1.7.25</slf4j>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -51,22 +58,29 @@
                 <artifactId>spring-tx</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <!--此处需要注意的是， spring5 及以上版本要求 junit 的版本必须是 4.12 及以上，否则用不了。
+            用于junit单元测试，-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>4.0.1</version>
+                <version>${servlet-api}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>javax.servlet.jsp-api</artifactId>
-                <version>2.3.1</version>
+                <version>${servlet.jsp-api}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.49</version>
+                <version>${fastjson}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -74,9 +88,9 @@
                 <version>${mybatis}</version>
             </dependency>
             <dependency>
-                <groupId>com.mysql</groupId>
+                <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.5</version>
+                <version>${mysql-connector-java}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -84,9 +98,24 @@
                 <version>${mybatis-spring}</version>
             </dependency>
             <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>1.2.17</version>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.25</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.25</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

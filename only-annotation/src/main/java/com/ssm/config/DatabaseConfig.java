@@ -1,6 +1,5 @@
 package com.ssm.config;
 
-import org.apache.ibatis.logging.log4j.Log4jImpl;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -28,16 +27,6 @@ public class DatabaseConfig {
     public String username;
     @Value("${db.password}")
     public String password;
-    @Value("${db.initialSize}")
-    public int initialSize;
-    @Value("${db.maxActive}")
-    public int maxActive;
-    @Value("${db.maxIdle}")
-    public int maxIdle;
-    @Value("${db.minIdle}")
-    public int minIdle;
-    @Value("${db.maxWait}")
-    public int maxWait;
 
 
 
@@ -50,13 +39,9 @@ public class DatabaseConfig {
         dataSource.setUrl(url);
         return dataSource;
     }
-
-
     @Bean
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-        org.apache.ibatis.session.Configuration configuration=new org.apache.ibatis.session.Configuration();
-        configuration.setLogImpl(Log4jImpl.class);
         sessionFactory.setDataSource(dataSource());
         return sessionFactory.getObject();
     }
