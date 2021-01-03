@@ -18,4 +18,11 @@ public class UserService {
         User user = userDao.getUser(username);
         return user;
     }
+
+    public User getUser() {
+        User user = new User();
+        user.setUsername("ljh");
+        user.setPassword("ljh");
+        return user;
+    }
 }

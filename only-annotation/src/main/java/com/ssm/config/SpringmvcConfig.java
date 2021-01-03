@@ -5,6 +5,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
@@ -20,6 +21,7 @@ import java.util.List;
 @Configuration
 @ComponentScan(basePackages = "com.ssm")
 @Import(DatabaseConfig.class)
+@ImportResource("classpath:spring.xml")
 public class SpringmvcConfig extends WebMvcConfigurationSupport {
 
     @Override
