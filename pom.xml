@@ -25,7 +25,7 @@
         <fastjson>1.2.49</fastjson>
         <lombok>1.18.10</lombok>
         <jackson>2.10.0</jackson>
-        <mybatis>3.5.3</mybatis>
+        <mybatis>3.5.6</mybatis>
         <servlet-api>4.0.1</servlet-api>
         <servlet.jsp-api>2.3.1</servlet.jsp-api>
         <mysql-connector-java>5.1.40</mysql-connector-java>
