@@ -22,7 +22,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>5.2.0.RELEASE</spring.version>
         <mybatis-spring>2.0.3</mybatis-spring>
-        <fastjson>1.2.49</fastjson>
+        <fastjson>1.2.83</fastjson>
         <lombok>1.18.10</lombok>
         <jackson>2.10.0</jackson>
         <mybatis>3.5.3</mybatis>
