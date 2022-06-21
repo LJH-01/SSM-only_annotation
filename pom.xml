@@ -28,7 +28,7 @@
         <mybatis>3.5.3</mybatis>
         <servlet-api>4.0.1</servlet-api>
         <servlet.jsp-api>2.3.1</servlet.jsp-api>
-        <mysql-connector-java>5.1.40</mysql-connector-java>
+        <mysql-connector-java>8.0.28</mysql-connector-java>
         <slf4j>1.7.25</slf4j>
     </properties>
 
